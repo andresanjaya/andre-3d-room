@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#9aa4a2" />
+    <title>Andre Archive Room</title>
+  </head>
+  <body>
+    <canvas id="room" aria-label="Interactive 3D room viewer"></canvas>
+    <div id="content-layer" aria-hidden="true">
+      <section id="archive-board" aria-label="Andre personal archive board">
+        <span class="board-label">ANDRE'S ARCHIVE</span>
+        <figure class="polaroid photo-a"><img data-board-asset="pics2.png" alt="" /><figcaption>good days</figcaption></figure>
+        <figure class="polaroid photo-b"><img data-board-asset="profile (2).jpg" alt="" /><figcaption>somewhere warm</figcaption></figure>
+        <figure class="polaroid photo-c"><img data-board-asset="figma-sticker.jpg" alt="" /><figcaption>making things</figcaption></figure>
+        <figure class="polaroid photo-d"><img data-board-asset="bali-postcard.png" alt="" /><figcaption>friends</figcaption></figure>
+        <div class="sticky sticky-one">take more<br />photos</div><div class="sticky sticky-two">make it<br />weird ✦</div>
+        <img class="sticker pokemon" data-board-asset="pokemon-card.png" alt="" /><img class="sticker marvel" data-board-asset="marvel.png" alt="" />
+        <img class="sticker postcard" data-board-asset="bali-postcard.png" alt="" /><img class="sticker spider" data-board-asset="spiderman-sticker.png" alt="Spider-Man sticker" /><span class="pin pin-a"></span><span class="pin pin-b"></span><span class="tape tape-a"></span>
+      </section>
+      <section id="monitor-site" aria-label="Andre portfolio website">
+        <header class="monitor-nav"><strong>ANDRE.</strong><nav><span>ABOUT</span><span>WORK</span><span>CONTACT ↗</span></nav></header>
+        <div class="monitor-copy"><small>PORTFOLIO / 2026</small><h1>Ideas,<br /><em>made visible.</em></h1><p>Digital products, visual systems, and thoughtful experiences.</p><b>VIEW SELECTED WORK →</b></div>
+        <div class="monitor-orbit"><i></i><i></i><i></i><span>A</span></div>
+      </section>
+    </div>
+    <button id="back" type="button" aria-label="Return to room view" hidden>Back</button>
+    <div id="loader" role="status" aria-live="polite">
+      <div class="loader-mark">A<span></span></div>
+      <p id="loader-label">Loading archive room</p>
+      <div class="loader-track"><i id="loader-progress"></i></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

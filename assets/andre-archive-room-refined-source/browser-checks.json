@@ -1,0 +1,12 @@
+{
+  "desktopFits": true,
+  "mobileFits": true,
+  "dragSafe": true,
+  "focus": true,
+  "restore": true,
+  "back": true,
+  "lampOff": true,
+  "lampOn": true,
+  "nonblankPixels": 59587,
+  "errors": []
+}

@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="data:,"><title>Export refined room</title><script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script></head><body><button id="export">Download GLB</button><p id="status">Ready</p><script type="module">
+import {createRoom} from './room.mjs';
+import {GLTFExporter} from 'three/addons/exporters/GLTFExporter.js';
+const {scene}=createRoom();
+window.exportRoom=async()=>{document.querySelector('#status').textContent='Exporting...';const glb=await new GLTFExporter().parseAsync(scene,{binary:true});const bytes=new Uint8Array(glb);let str='';for(let i=0;i<bytes.length;i+=32768)str+=String.fromCharCode(...bytes.subarray(i,i+32768));return btoa(str);};
+document.querySelector('#export').onclick=async()=>{const b=await window.exportRoom();const a=document.createElement('a');a.href='data:model/gltf-binary;base64,'+b;a.download='andre-archive-room-refined.glb';a.click();document.querySelector('#status').textContent='Export complete';};
+window.exportReady=true;
+</script></body></html>

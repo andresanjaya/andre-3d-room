@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+
+# Local QA screenshots and editor metadata
+board-qa-*.png
+.vscode/
