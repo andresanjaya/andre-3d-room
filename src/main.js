@@ -5,7 +5,10 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { OutlinePass } from 'three/addons/postprocessing/OutlinePass.js';
 import { CSS3DObject, CSS3DRenderer } from 'three/addons/renderers/CSS3DRenderer.js';
+import { inject } from '@vercel/analytics';
 import './style.css';
+
+inject();
 
 const canvas = document.querySelector('#room');
 const backButton = document.querySelector('#back');
